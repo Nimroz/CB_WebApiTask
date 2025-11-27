@@ -4,8 +4,10 @@ namespace CB_WebApiTask.Models.Entities
 {
     public class Customer
     {
+
         [Key]//Ic Number Used As PK not Using id for simplicity
         [Display(Name = "IC NUMBER")]
+        [StringLength(8, MinimumLength = 8, ErrorMessage = "IC Number must be exactly 8 digits.")]
         public required string IcNumber { get; set; }
         [Display(Name = "CUSTOMER NAME")]
         public required string CustomerName { get; set; }
